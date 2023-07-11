@@ -31,3 +31,37 @@ Run the server with `uvicorn`.
 ```cmd
 uvicorn main:app --reload
 ```
+
+## Endpoints
+
+### about
+
+`GET:http://localhost:8000/about`
+
+returns
+
+```json
+{
+  "about": "This api is for summarizing an input prompt and returning short summarized text. It is using ChatGPT for the summarization."
+}
+```
+
+### summarize
+
+`POST:http://localhost:8000/summarize`
+
+body
+
+```json
+{
+  "text": "Some text"
+}
+```
+
+returns
+
+```json
+{
+  "response": "summarized text"
+}
+```
